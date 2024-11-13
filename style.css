@@ -1,127 +1,56 @@
-/* Reset some default styling for consistent cross-browser appearance */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Centering and basic styling for form elements */
-form {
+/* Container styles */
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
   background: #fff;
   padding: 20px;
-  margin: 20px auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="password"],
-input[type="number"],
-button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-button {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-/* Add some margin and padding for general page structure */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Styling for messages or alerts */
-.alert {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.alert-success {
-  background-color: #d4edda;
-  color: #155724;
-  border-color: #c3e6cb;
-}
-
-.alert-error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border-color: #f5c6cb;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #007bff;
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 input[type="number"] {
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px;
+  font-size: 1rem;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -129,4 +58,101 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Headings */
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Lists for user display */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #e9ecef;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+/* Table styles for bet list */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+/* Styling for the table container */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Table headers */
+thead th {
+  background-color: #007bff;
+  /* Blue background for header */
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+/* Table rows */
+tbody tr {
+  border: 1px solid #ccc;
+}
+
+/* Table cells */
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Alternating row colors for readability */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* h2 header styling */
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
